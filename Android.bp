@@ -15,22 +15,7 @@ cc_library_shared {
     cflags: ["-DCONFIG_HW_DISK_ENCRYPTION"],
     srcs: sourceFiles,
     shared_libs: commonSharedLibraries,
-
-    product_variables: {
-        lineage: {
-            should_skip_waiting_for_qsee: {
-                cflags: ["-DSKIP_WAITING_FOR_QSEE"],
-            },
-            supports_legacy_hw_fde: {
-                cflags: ["-DLEGACY_HW_DISK_ENCRYPTION"],
-            },
-            uses_metadata_as_fde_key: {
-                cflags: ["-DUSE_METADATA_FOR_KEY"],
-            },
-        },
-    },
-
-    owner: "qti",
+    owner: "qcom",
 }
 
 cc_library_headers {
